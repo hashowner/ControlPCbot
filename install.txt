@@ -1,0 +1,6 @@
+pyTelegramBotAPI
+mouse
+Pillow
+pySmartDL
+opencv-python
+psutil
