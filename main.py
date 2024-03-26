@@ -56,7 +56,7 @@ btncmd = types.KeyboardButton('✅Выполнить команду')
 btnoff = types.KeyboardButton('⛔️Выключить компьютер')
 btnreb = types.KeyboardButton('♻️Перезагрузить компьютер')
 btninfo = types.KeyboardButton('🖥О компьютере')
-btnback = types.KeyboardButton('⏪Назад⏪')
+btnback = types.KeyboardButton('⏪Назад')
 additionals_keyboard.row(btnoff, btnreb)
 additionals_keyboard.row(btncmd, btnweb)
 additionals_keyboard.row(btninfo, btnback)
@@ -68,7 +68,7 @@ _😴Спящий режим_ - переводит пк в спящий режи
 _📂Файлы и процессы_ - переходит в меню с управлением файлов и процессов
 _❇️Дополнительно_ - переходит в меню с доп. функциями
 _💪Нагруженность_ - показывает нагруженность вашего пк
-_⏪Назад⏪_ - возвращает в главное меню
+_⏪Назад_ - возвращает в главное меню
 
 _🔗Перейти по ссылке_ - переходит по указанной ссылке(важно указать "http://" или "https://" для открытия ссылки в стандартном браузере, а не IE)
 _✅Выполнить команду_ - выполняет в cmd любую указанную команду
@@ -98,7 +98,7 @@ def get_text_messages(message):
             except Exception as e:
                 bot.send_message(my_id, f"Ошибка при получении скриншота: {e}")
                 
-        elif message.text == "⏪Назад⏪":
+        elif message.text == "⏪Назад":
             back(message)
 
         elif message.text == "📂Файлы и процессы":
@@ -154,7 +154,7 @@ def addons_process(message):
             bot.send_message(my_id, f"*Пользователь:* {uname}\n*IP:* {ip}\n*ОС:* {windows}\n*Процессор:* {processor}", parse_mode="markdown")
             bot.register_next_step_handler(message, addons_process)
 
-        elif message.text == "⏪Назад⏪":
+        elif message.text == "⏪Назад":
             back(message)
         else:
             pass
@@ -185,7 +185,7 @@ def files_process(message):
             bot.send_message(my_id, "Укажите прямую ссылку скачивания:")
             bot.register_next_step_handler(message, uploadurl_process)
 
-        elif message.text == "⏪Назад⏪":
+        elif message.text == "⏪Назад":
             back(message)
         else:
             pass
